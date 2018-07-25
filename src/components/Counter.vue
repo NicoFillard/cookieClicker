@@ -51,8 +51,8 @@ export default {
 }
 
 .cookie {
-    width: 30%;
-    height: 30%;
+    width: 20%;
+    height: 20%;
     cursor: pointer;
     transition: all .5s;
 }
