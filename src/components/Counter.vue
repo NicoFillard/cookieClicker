@@ -26,9 +26,6 @@ export default {
   },
   methods: {
     // action from the store
-    // ...mapActions({
-    //   incrementCount: 'incrementCount'
-    // }),
     increment () {
       // this.count++
       this.$store.dispatch("incrementCount", (this.count + 1));

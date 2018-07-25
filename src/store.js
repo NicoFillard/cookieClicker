@@ -1,11 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import products from '@/assets/objects/products'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    countTotal: 0
+    countTotal: 0,
+    products: products
   },
   mutations: {
     "SET_COUNT": (state, newTotal) => {

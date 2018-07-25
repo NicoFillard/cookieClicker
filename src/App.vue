@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Counter count=0 />
+    <Shop></Shop>
   </div>
 </template>
 
 <script>
 import Counter from "./components/Counter.vue";
+import Shop from "./components/Shop.vue";
 
 export default {
   name: "app",
   components: {
-    Counter
+    Counter,
+    Shop
   }
 };
 </script>
