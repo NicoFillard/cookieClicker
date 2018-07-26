@@ -59,9 +59,6 @@ const store = new Vuex.Store({
   getters: {
     count(state) {
       return state.countTotal;
-    },
-    products(state) {
-      return state.products.products;
     }
   }
 });

@@ -18,8 +18,8 @@ export default {
     return {};
   },
   computed: {
-    // count and products from the store
-    ...mapGetters(["count", "products"]),
+    // count from the store
+    ...mapGetters(["count"]),
   },
   methods: {
     // action from the store
