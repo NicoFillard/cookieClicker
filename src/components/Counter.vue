@@ -1,7 +1,6 @@
 <template>
   <div>
-    <span class="count">{{count}}</span>
-    <!-- <button @click="increment">Increment</button> -->
+    <span class="count">{{ count }}</span>
     <div class="content">
         <div class="cookie-wrapper">
             <img ref="cookie" class="cookie" @click="increment" src="../assets/cookie.png" alt="">
@@ -19,19 +18,12 @@ export default {
     return {};
   },
   computed: {
-    // count from the store
-    ...mapGetters({
-      count: "count"
-    }),
-    // products from the store
-    products: function() {
-      return this.$store ? this.$store.state.products.products : null;
-    }
+    // count and products from the store
+    ...mapGetters(["count", "products"]),
   },
   methods: {
     // action from the store
     increment() {
-      // this.count++
       this.$store.dispatch("incrementCount", this.count + 1);
     }
   }
