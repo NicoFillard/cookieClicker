@@ -11,56 +11,53 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'counter',
-  data () {
-    return {
-
-    }
+  name: "counter",
+  data() {
+    return {};
   },
   computed: {
     // count from the store
     ...mapGetters({
-      count: 'count'
+      count: "count"
     }),
     // products from the store
-    products: function () {
-        return this.$store ? this.$store.state.products.products : null
-    },
-
+    products: function() {
+      return this.$store ? this.$store.state.products.products : null;
+    }
   },
   methods: {
     // action from the store
-    increment () {
+    increment() {
       // this.count++
-      this.$store.dispatch("incrementCount", (this.count + 1));
+      this.$store.dispatch("incrementCount", this.count + 1);
     }
   }
-}
+};
 </script>
 <style media="screen">
 .content {
-    flex: 1;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .cookie-wrapper {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cookie {
-    width: 20%;
-    height: 20%;
-    cursor: pointer;
-    transition: all .5s;
+  width: 20%;
+  height: 20%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 </style>

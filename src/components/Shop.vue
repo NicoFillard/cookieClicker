@@ -5,25 +5,23 @@
 </template>
 
 <script>
-import Product from '@/components/Product'
-import { mapGetters } from "vuex";
+import Product from "@/components/Product";
 
 export default {
-  name: 'shop',
-  data () {
-    return {}
+  name: "shop",
+  data() {
+    return {};
   },
   components: {
     Product
   },
   computed: {
     //products from the store - if there is products
-    products: function () {
-        return this.$store ? this.$store.state.products.products : null
+    products: function() {
+      return this.$store ? this.$store.state.products.products : null;
     }
   }
-}
-
+};
 </script>
 
 <style>
