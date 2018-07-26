@@ -32,9 +32,6 @@ export default {
   },
   mounted () {
     this.$store.dispatch("farmProducts", (this.product.name));
-    // if (this.$store.state.cursor >= 1 || this.$store.state.grandma >= 1) {
-    //   this.$store.dispatch("farmProducts", (this.product.id));
-    // }
   },
   methods: {
     buy () {

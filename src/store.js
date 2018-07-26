@@ -7,9 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     countTotal: 0,
-    products: products,
-    cursor: 0,
-    grandma: 0
+    products: products
   },
   mutations: {
     //Renvoie le résultat du countTotal après calcul
@@ -24,11 +22,6 @@ export default new Vuex.Store({
                 product.purchased = product.purchased + 1
                 state.countTotal -= product.price
                 product.price = 1.22 * product.price
-                if (product.name === "Cursor") {
-                  state.cursor = state.cursor + 1
-                } else {
-                  state.grandma = state.grandma + 1
-                }
             }
 
             return product;
