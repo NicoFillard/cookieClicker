@@ -4,14 +4,14 @@ export default {
    products: [
       {
           id: uuid(),
-          name: 'Cursor',
+          name: 'cursor',
           price: 50,
           cookiePerSeconds: 1,
           purchased: 0
       },
       {
           id: uuid(),
-          name: 'Grandma',
+          name: 'grandma',
           price: 100,
           cookiePerSeconds: 5,
           purchased: 0

@@ -16,13 +16,20 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   name: 'counter',
   data () {
-    return {}
+    return {
+
+    }
   },
   computed: {
-    // state from the store
+    // count from the store
     ...mapGetters({
       count: 'count'
-    })
+    }),
+    // products from the store
+    products: function () {
+        return this.$store ? this.$store.state.products.products : null
+    },
+
   },
   methods: {
     // action from the store

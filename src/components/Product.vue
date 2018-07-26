@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 
 export default {
   name: 'product',
@@ -30,6 +29,12 @@ export default {
     canBuy: function () {
       return this.$store.state.countTotal >= this.product.price
     }
+  },
+  mounted () {
+    this.$store.dispatch("farmProducts", (this.product.name));
+    // if (this.$store.state.cursor >= 1 || this.$store.state.grandma >= 1) {
+    //   this.$store.dispatch("farmProducts", (this.product.id));
+    // }
   },
   methods: {
     buy () {

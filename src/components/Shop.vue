@@ -17,12 +17,10 @@ export default {
     Product
   },
   computed: {
+    //products from the store - if there is products
     products: function () {
         return this.$store ? this.$store.state.products.products : null
     }
-  },
-  methods: {
-
   }
 }
 
@@ -36,5 +34,5 @@ export default {
   background: #222;
   color: white;
   width: 300px;
-  }
+}
 </style>
