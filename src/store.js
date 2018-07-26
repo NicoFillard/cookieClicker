@@ -32,13 +32,13 @@ const store = new Vuex.Store({
       state.countTotal = state.countTotal + cookies;
     },
     initialiseStore(state) {
-			// Check if the ID exists
-			if(localStorage.getItem('store')) {
+      // Check if the ID exists
+      if (localStorage.getItem("store")) {
         store.replaceState(
-					Object.assign(state, JSON.parse(localStorage.getItem('store')))
-				);
-			}
-		}
+          Object.assign(state, JSON.parse(localStorage.getItem("store")))
+        );
+      }
+    }
   },
   actions: {
     incrementCount({ commit }, total) {
@@ -63,7 +63,7 @@ const store = new Vuex.Store({
   }
 });
 store.subscribe((mutation, state) => {
-	// Store the state object as a JSON string
-	localStorage.setItem('store', JSON.stringify(state));
+  // Store the state object as a JSON string
+  localStorage.setItem("store", JSON.stringify(state));
 });
-export default store
+export default store;

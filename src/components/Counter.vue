@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     // count from the store
-    ...mapGetters(["count"]),
+    ...mapGetters(["count"])
   },
   methods: {
     // action from the store
